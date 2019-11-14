@@ -40,9 +40,9 @@ sleep 0.5
 
 echo  "\n\n"
 echo " /---------- Creating PHP application folder and files ----------- / "
-mkdir .conf
-cd .conf
-touch index.php config.conf
+mkdir app
+cd app
+touch index.php config.php
 mkdir themes
 cd themes
 mkdir default
@@ -95,8 +95,8 @@ sleep 0.5
 
 echo   "\n\n"
 echo " /---------- Creating Graphic Design portfolio folder and sample pages ----------- / "
-mkdir graphic-design
-cd graphic-design
+mkdir print-portfolio
+cd print-portfolio
 touch index.php acme-business-card.php acme-complete-stationary-set.php
 pwd
 ls -l
@@ -117,8 +117,8 @@ sleep 0.5
 
 echo   "\n\n"
 echo " /---------- Creating Web Design portfolio folder and sample pages ----------- / "
-mkdir web-design
-cd web-design
+mkdir web-portfolio
+cd web-portfolio
 touch index.php php-project.php sample-ecommerce-mockups.php sample-personal-web-site.php sample-wordpress-interface.php
 pwd
 ls -l
