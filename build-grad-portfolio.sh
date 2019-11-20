@@ -1,4 +1,6 @@
 #!/bin/bash
+# version 0.832
+# November 20 2019
 
 echo "The following command will set the display all (invisible) files on your Mac setting to True. Your screen may blink. This is not dangerous."
 defaults write com.apple.finder AppleShowAllFiles TRUE;killall Finder
@@ -53,6 +55,42 @@ ls -l
 echo "Building the PHP application folder and files completed successfully"
 cd ../../../
 sleep 0.5
+
+
+echo  "\n\n"
+echo " /---------- Creating Content folder and subfolder ----------- / "
+mkdir content
+cd content
+touch index.php
+mkdir audio db-records img pdf social swf video
+cd audio
+touch index.php
+cd ../
+cd db-records
+touch index.php
+cd ../
+cd img
+touch index.php
+cd ../
+cd pdf
+touch index.php
+cd ../
+cd social
+touch index.php
+cd ../
+cd swf
+touch index.php
+cd ../
+cd video
+touch index.php
+cd ../
+pwd
+ls -l
+echo "Creating Content folder and subfolder completed successfully"
+cd ../
+sleep 0.5
+
+
 
 
 echo  "\n\n"
