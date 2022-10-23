@@ -1,168 +1,177 @@
 #!/bin/bash
-# version 0.832
-# November 20 2019
-
-echo "The following command will set the display all (invisible) files on your Mac setting to True. Your screen may blink. This is not dangerous."
-defaults write com.apple.finder AppleShowAllFiles TRUE;killall Finder
-
-echo "Hello, who am I talking to?"
-read  -p 'student: ' varstudent
-echo "Let's have fun $varstudent"
-
-echo "$varstudent, where would you like to build your portfolio? By default, you should drag your Bitnami htdocs folder into this window."
-
-read  -p 'path: ' varportfoliopath
-cd $varportfoliopath
-
-echo "Please type your first name and last name with no spaces and no capitals. For example: john-smith"
-read -p 'Your grad folder name: ' varfoldername
-
-if [[ $varfoldername != *[-]* ]]
-then
-  echo "Your folder name does not contain a hyphen. Please retype it."
-  read -p 'Your grad folder name: ' varfoldername
-fi
+# version 1.12
+# August 26 2022
 
 
-if [[ $varfoldername == *['!'@#\$%^\&*\(\)_+]* ]]
-then
-  echo "Your folder name contains illegal characters. Please type only your name and hyphen(s) please."
-  read -p 'Your grad folder name: ' varfoldername
-fi
+# To use this script, save the script on your computer
+# Open the Terminal application on your Mac (in Applications > Utilities)
+# In the terminal window type "sh " (sh followed by a space)
+# Drag and drop this file onto the Terminal window
+# The path to this file will display in the window
+# Hit return to execute the script
+# The new "_Comprehensive Assessment" folder will be in your Documents folder
 
-echo  "\n\n"
-echo " /---------- Creating Current Grads folder ----------- / "
-mkdir current-grads
-cd current-grads
+cd ~/Documents
 
-echo "Creating your folder"
-mkdir $varfoldername
-cd $varfoldername
-sleep 0.5
+mkdir "_Comprehensive Assessment"
+cd "_Comprehensive Assessment"
 
-echo  "\n\n"
-echo " /---------- Creating PHP application folder and files ----------- / "
-mkdir app
-cd app
-touch index.php config.php
-mkdir themes
-cd themes
-mkdir default
-cd default
-mkdir css js inc templates
-pwd
-ls -l
-echo "Building the PHP application folder and files completed successfully"
-cd ../../../
-sleep 0.5
-
-
-echo  "\n\n"
-echo " /---------- Creating Content folder and subfolder ----------- / "
-mkdir content
-cd content
-touch index.php
-mkdir audio db-records img pdf social swf video
-cd audio
-touch index.php
-cd ../
-cd db-records
-touch index.php
-cd ../
-cd img
-touch index.php
-cd ../
-cd pdf
-touch index.php
-cd ../
-cd social
-touch index.php
-cd ../
-cd swf
-touch index.php
-cd ../
-cd video
-touch index.php
-cd ../
-pwd
-ls -l
-echo "Creating Content folder and subfolder completed successfully"
-cd ../
-sleep 0.5
-
-
-
-
-echo  "\n\n"
-echo " /---------- Creating PHP pages and subfolders ----------- / "
-touch index.php about.php portfolio.php resume.php
-mkdir blog
-cd blog
-touch index.php
-pwd
-ls -l
-echo "<?php \n\n //install wordpress here \n\n ?>" >> index.php
+mkdir "01 A logo collage" 
+cd "01 A logo collage" 
+mkdir 01-Original\ Files 02-HighRes\ RGB 03-Web\ Ready\ JPEGs 04-Print\ Ready\ CMYK\ TIFFs
 cd ..
-sleep 0.5
 
-echo   "\n\n"
-echo " /---------- Creating Comprehensive Assessment folder and pages ----------- / "
-touch comprehensive-assessment.php
-mkdir ca
-cd ca
-touch index.php advertising-material-2.php advertising-material.php animation.php before-and-after-retouching.php book-chapter.php brochure-with-complex-alignments.php catalog.php complete-stationery-set.php creative-photography.php dust-jacket.php ebook.php facebook-retail-banner.php formatting-a-web-page-for-optimized-sharing.php infographic.php logo-collage.php lookbook-with-original-photography-and-illustration.php magazine-cover-with-original-photography-and-or-illustration.php magazine.php mockup-web-site-design.php newsletter.php packaging.php photo-retouching.php poster-with-full-page-illustration-art.php print-newsletter.php responsive-email.php web-form-with-complex-alignments.php wordpress-front-end-design-css.php
-pwd
-ls -l
-echo "Building the Comprehensive Assessment folder completed successfully"
+mkdir "02 Advertising material 1 (flyers, brochures, ads, etc.)" 
+cd "02 Advertising material 1 (flyers, brochures, ads, etc.)" 
+mkdir 01-Original\ Files 02-HighRes\ RGB 03-Web\ Ready\ JPEGs 04-Print\ Ready\ CMYK\ TIFFs
 cd ..
-sleep 0.5
 
-echo   "\n\n"
-echo " /---------- Creating Contact folder and pages ----------- / "
-touch contact.php
-mkdir contact
-cd contact
-touch index.php error.php thank-you.php
-echo "<?php \n\n //Visit https://www.thesitewizard.com/wizards/feedbackform.shtml to get a working sendmail PHP script \n\n ?>" >> index.php
-pwd
-ls -l
-echo "Building the Contact folder and pages completed successfully"
+mkdir "03 Advertising material 2 (logos, ads, brochures, specialty items, retail displays, etc.)" 
+cd "03 Advertising material 2 (logos, ads, brochures, specialty items, retail displays, etc.)" 
+mkdir 01-Original\ Files 02-HighRes\ RGB 03-Web\ Ready\ JPEGs 04-Print\ Ready\ CMYK\ TIFFs
 cd ..
-sleep 0.5
 
-
-echo   "\n\n"
-echo " /---------- Creating Graphic Design portfolio folder and sample pages ----------- / "
-mkdir print-portfolio
-cd print-portfolio
-touch index.php acme-business-card.php acme-complete-stationary-set.php
-pwd
-ls -l
-echo "Building the Graphic Design portfolio folder and sample pages completed successfully"
+mkdir "04 An animation (should be embedded in a web page)"
+cd "04 An animation (should be embedded in a web page)" 
+mkdir 01-Original\ Files 02-HighRes\ RGB 03-Web\ Ready\ JPEGs 04-Print\ Ready\ CMYK\ TIFFs
 cd ..
-sleep 0.5
 
-echo   "\n\n"
-echo " /---------- Creating img folder and sample images ----------- / "
-mkdir img
-cd img
-touch index.php sample-acme-business-card.png sample-web-mockup.jpg
-pwd
-ls -l
-echo "img folder and sample images completed successfully"
+mkdir "05 Book chapter(s)" 
+cd "05 Book chapter(s)" 
+mkdir 01-Original\ Files 02-HighRes\ RGB 03-Web\ Ready\ JPEGs 04-Print\ Ready\ CMYK\ TIFFs
 cd ..
-sleep 0.5
 
-echo   "\n\n"
-echo " /---------- Creating Web Design portfolio folder and sample pages ----------- / "
-mkdir web-portfolio
-cd web-portfolio
-touch index.php php-project.php sample-ecommerce-mockups.php sample-personal-web-site.php sample-wordpress-interface.php
-pwd
-ls -l
-echo "Building the Web Design portfolio folder and sample pages completed successfully"
-sleep 0.5
+mkdir "06 Branding" 
+cd "06 Branding" 
+mkdir 01-Original\ Files 02-HighRes\ RGB 03-Web\ Ready\ JPEGs 04-Print\ Ready\ CMYK\ TIFFs
+cd ..
 
-echo "\n\n"
-echo "Note that most of the above files are empty. You must add all the code."
-echo Done.
+mkdir "07 Brochure with Complex Alignments" 
+cd "07 Brochure with Complex Alignments" 
+mkdir 01-Original\ Files 02-HighRes\ RGB 03-Web\ Ready\ JPEGs 04-Print\ Ready\ CMYK\ TIFFs
+cd ..
+
+mkdir "08 Catalog" 
+cd "08 Catalog" 
+mkdir 01-Original\ Files 02-HighRes\ RGB 03-Web\ Ready\ JPEGs 04-Print\ Ready\ CMYK\ TIFFs
+cd ..
+
+mkdir "09 Commercial retail responsive website 1" 
+cd "09 Commercial retail responsive website 1" 
+mkdir 01-Original\ Files 02-HighRes\ RGB 03-Web\ Ready\ JPEGs 04-Print\ Ready\ CMYK\ TIFFs
+cd ..
+
+mkdir "10 Commercial retail responsive website 2" 
+cd "10 Commercial retail responsive website 2" 
+mkdir 01-Original\ Files 02-HighRes\ RGB 03-Web\ Ready\ JPEGs 04-Print\ Ready\ CMYK\ TIFFs
+cd ..
+
+mkdir "11 Complete stationery set"
+cd "11 Complete stationery set" 
+mkdir 01-Original\ Files 02-HighRes\ RGB 03-Web\ Ready\ JPEGs 04-Print\ Ready\ CMYK\ TIFFs
+cd ..
+
+mkdir "12 Creative personal web site" 
+cd "12 Creative personal web site" 
+mkdir 01-Original\ Files 02-HighRes\ RGB 03-Web\ Ready\ JPEGs 04-Print\ Ready\ CMYK\ TIFFs
+cd ..
+
+mkdir "13 Creative Photography" 
+cd "13 Creative Photography" 
+mkdir 01-Original\ Files 02-HighRes\ RGB 03-Web\ Ready\ JPEGs 04-Print\ Ready\ CMYK\ TIFFs
+cd ..
+
+mkdir "14 Designed web form with complex alignments"
+cd "14 Designed web form with complex alignments" 
+mkdir 01-Original\ Files 02-HighRes\ RGB 03-Web\ Ready\ JPEGs 04-Print\ Ready\ CMYK\ TIFFs
+cd ..
+
+mkdir "15 Dust Jacket" 
+cd "15 Dust Jacket" 
+mkdir 01-Original\ Files 02-HighRes\ RGB 03-Web\ Ready\ JPEGs 04-Print\ Ready\ CMYK\ TIFFs
+cd ..
+
+mkdir "16 eBook" 
+cd "16 eBook" 
+mkdir 01-Original\ Files 02-HighRes\ RGB 03-Web\ Ready\ JPEGs 04-Print\ Ready\ CMYK\ TIFFs
+cd ..
+
+mkdir "17 Formatting a web page for optimized sharing"
+cd "17 Formatting a web page for optimized sharing" 
+mkdir 01-Original\ Files 02-HighRes\ RGB 03-Web\ Ready\ JPEGs 04-Print\ Ready\ CMYK\ TIFFs
+cd ..
+
+mkdir "18 Infographic" 
+cd "18 Infographic" 
+mkdir 01-Original\ Files 02-HighRes\ RGB 03-Web\ Ready\ JPEGs 04-Print\ Ready\ CMYK\ TIFFs
+cd ..
+
+mkdir "19 LookBook with original photography and illustration" 
+cd "19 LookBook with original photography and illustration" 
+mkdir 01-Original\ Files 02-HighRes\ RGB 03-Web\ Ready\ JPEGs 04-Print\ Ready\ CMYK\ TIFFs
+cd ..
+
+mkdir "20 Magazine cover with original photography and or illustration"
+cd "20 Magazine cover with original photography and or illustration" 
+mkdir 01-Original\ Files 02-HighRes\ RGB 03-Web\ Ready\ JPEGs 04-Print\ Ready\ CMYK\ TIFFs
+cd ..
+
+mkdir "21 Magazine spread with original image and or illustration graphics" 
+cd "21 Magazine spread with original image and or illustration graphics" 
+mkdir 01-Original\ Files 02-HighRes\ RGB 03-Web\ Ready\ JPEGs 04-Print\ Ready\ CMYK\ TIFFs
+cd ..
+
+mkdir "22 Mockup web site design" 
+cd "22 Mockup web site design" 
+mkdir 01-Original\ Files 02-HighRes\ RGB 03-Web\ Ready\ JPEGs 04-Print\ Ready\ CMYK\ TIFFs
+cd ..
+
+mkdir "23 Packaging" 
+cd "23 Packaging" 
+mkdir 01-Original\ Files 02-HighRes\ RGB 03-Web\ Ready\ JPEGs 04-Print\ Ready\ CMYK\ TIFFs
+cd ..
+
+mkdir "24 Photo retouching"
+cd "24 Photo retouching" 
+mkdir 01-Original\ Files 02-HighRes\ RGB 03-Web\ Ready\ JPEGs 04-Print\ Ready\ CMYK\ TIFFs
+cd ..
+
+mkdir "25 Photo retouching in “before and after” advertising shot(s)" 
+cd "25 Photo retouching in “before and after” advertising shot(s)" 
+mkdir 01-Original\ Files 02-HighRes\ RGB 03-Web\ Ready\ JPEGs 04-Print\ Ready\ CMYK\ TIFFs
+cd ..
+
+mkdir "26 Poster with full page illustration art" 
+cd "26 Poster with full page illustration art" 
+mkdir 01-Original\ Files 02-HighRes\ RGB 03-Web\ Ready\ JPEGs 04-Print\ Ready\ CMYK\ TIFFs
+cd ..
+
+mkdir "27 Print newsletter" 
+cd "27 Print newsletter" 
+mkdir 01-Original\ Files 02-HighRes\ RGB 03-Web\ Ready\ JPEGs 04-Print\ Ready\ CMYK\ TIFFs
+cd ..
+
+mkdir "28 Responsive email newsletter" 
+cd "28 Responsive email newsletter" 
+mkdir 01-Original\ Files 02-HighRes\ RGB 03-Web\ Ready\ JPEGs 04-Print\ Ready\ CMYK\ TIFFs
+cd ..
+
+mkdir "29 Retail banner" 
+cd "29 Retail banner" 
+mkdir 01-Original\ Files 02-HighRes\ RGB 03-Web\ Ready\ JPEGs 04-Print\ Ready\ CMYK\ TIFFs
+cd ..
+
+mkdir "30 Short video (should be embedded in a web page)" 
+cd "30 Short video (should be embedded in a web page)" 
+mkdir 01-Original\ Files 02-HighRes\ RGB 03-Web\ Ready\ JPEGs 04-Print\ Ready\ CMYK\ TIFFs
+cd ..
+
+mkdir "31 Sketches (or other original artwork)" 
+cd "31 Sketches (or other original artwork)" 
+mkdir 01-Original\ Files 02-HighRes\ RGB 03-Web\ Ready\ JPEGs 04-Print\ Ready\ CMYK\ TIFFs
+cd ..
+
+mkdir "32 WordPress front-end design with CSS"
+cd "32 WordPress front-end design with CSS"
+mkdir 01-Original\ Files 02-HighRes\ RGB 03-Web\ Ready\ JPEGs 04-Print\ Ready\ CMYK\ TIFFs
+cd ..
