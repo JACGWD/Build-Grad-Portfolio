@@ -1,17 +1,14 @@
 # Build-Grad-Portfolio
 
-A simple BASH script that:
-
-- Turns macOS invisible files visible system-wide.
-- Creates a set of files and folders that correspond to the GWD Web App defaults.
+A simple BASH script that creates a set of folders that correspond to the GWD Comprehensive Assessment's requirements. John Abbott College GWD students can use these folders to organize their backups. It is highly recommended that this set of folders be saved on OneDrive.
 
 ## How to Use
 - Download the shell script to your desktop.
-- Open the macOS Terminal (search for it in Spotlight).
-- Create a folder on your desktop called "CA".
-- In the Terminal window type "cd " (cd followed by a space) then drag the CA folder into the Terminal window (this adds the path). Hit Return.
-- Then type "sh " (sh followed by a space)  and drag the downloaded script file into the window. Hit Return.
-- Follow the on-screen instructions.
+- Open the macOS Terminal (search for it in Spotlight; or go to /Applications/Utilities/Terminal.app).
+- Drag this file into the Terminal window (you will see the path to the file be written out. Such as "/Users/billypoppins/Desktop/build-grad-portfolio.sh"). 
+- Hit Return to execute the script.
+- A new "_Comprehensive Assessment" folder will appear on your Desktop.
+- Move this folder to your OneDrive folder.
 
 ## Note
-Most files created by this script are empty. You will have to add the HTML or PHP code yourself during Web V (fall semester) and Portfolio (final semester).
+Avoid adding very large files to your OneDrive folder near the end of a class period. You want to give OneDrive the opportunity to completely upload your files before the end of class.
